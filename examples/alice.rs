@@ -2,7 +2,7 @@ use rand;
 use rsa::pkcs8::DecodePublicKey;
 use rsa::{Pkcs1v15Encrypt, RsaPublicKey};
 use std::io::{self, Read, Write};
-use std::net::{TcpListener, TcpStream};
+use std::net::TcpStream;
 
 fn main() {
     let mut stream = TcpStream::connect("127.0.0.1:9123").unwrap();

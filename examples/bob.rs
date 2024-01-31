@@ -1,7 +1,7 @@
 use rsa::pkcs8::EncodePublicKey;
 use rsa::{Pkcs1v15Encrypt, RsaPrivateKey, RsaPublicKey};
 use std::io::{self, Read, Write};
-use std::net::{TcpListener, TcpStream};
+use std::net::TcpListener;
 use std::thread;
 
 fn main() {
