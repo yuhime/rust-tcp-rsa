@@ -1,0 +1,12 @@
+[package]
+name = "end-to-end"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rsa = "*"
+rand = "*"
+regex = "*"
+lazy_static = "*"
