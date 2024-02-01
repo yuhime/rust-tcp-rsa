@@ -21,8 +21,6 @@ fn main() {
             println!("accepted conn from : {}", stream.peer_addr().unwrap());
             let msg = pub_key_clone.to_public_key_der().unwrap();
 
-            println!("{}", msg.as_bytes().len());
-
             stream.write(msg.as_bytes()).unwrap();
             let mut buf = [0; 1024];
 
@@ -40,6 +38,8 @@ fn main() {
 
                 println!("decryped text : {}", String::from_utf8_lossy(&text));
                 io::stdout().flush().unwrap();
+
+                buf = [0; 1024];
             }
         });
     }
